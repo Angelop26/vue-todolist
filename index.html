@@ -18,8 +18,8 @@
         <div class="container">
             <h1>Todolist</h1>
             <div class="input-list">
-                <input type="text" class="todo-input" placeholder="aggiungi todo" >
-                <button class="addTodo-btn">Aggiungi</button>
+                <input type="text" class="todo-input" placeholder="aggiungi todo" v-model="newTodo.todo" @keyup.enter="addTodo" >
+                <button class="addTodo-btn" @click="addTodo">Aggiungi</button>
             </div>
 
             <ul>

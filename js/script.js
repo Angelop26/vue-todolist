@@ -16,10 +16,17 @@ createApp({
                     todo:'fare reso amazon',
                     done: true
                 }
-            ]
+            ],
+            newTodo:{
+                todo:'',
+                done:false
+            }
         }
     },
     methods:{
-
+        addTodo(){
+            this.Todos.push({...this.newTodo})
+            this.newTodo.todo =''
+        }
     }
 }).mount('#app')
